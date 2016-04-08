@@ -1,4 +1,4 @@
-package com.clinic.domain;
+package com.myclinica.domain;
 
 public class Cat extends Animal implements Pet {
 

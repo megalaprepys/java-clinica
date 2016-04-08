@@ -1,4 +1,4 @@
-package com.clinic.domain;
+package com.myclinica.domain;
 
 import java.util.ArrayList;
 import java.util.List;

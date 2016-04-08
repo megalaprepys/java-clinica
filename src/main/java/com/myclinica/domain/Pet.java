@@ -1,4 +1,4 @@
-package com.clinic.domain;
+package com.myclinica.domain;
 
 public interface Pet {
 	

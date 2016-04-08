@@ -1,8 +1,8 @@
-package com.clinic.domain;
+package com.myclinica.domain;
 
 import java.util.Scanner;
 
-public class Test {
+public class RunClinicaTest {
 	
 	static Scanner scanner = new Scanner(System.in);
 	static Clinica clinica = new Clinica();
@@ -27,13 +27,13 @@ public class Test {
 			System.out.println("3. Find client");
 			System.out.println("\n ==========\n");
 			System.out.print("Your choice: ");
-			String number = scanner.next();
+			int number = scanner.nextInt();
 			switch(number) {
-			case "1": addClients();
+			case 1: addClients();
 			break;
-			case "2": addAnimals();
+			case 2: addAnimals();
 			break;
-			case "3": getClients();
+			case 3: getClients();
 			break;
 			default : System.out.println("Error: number is wrong!");
 			}
@@ -89,7 +89,7 @@ public class Test {
 				if(nameClient.equals(client.getName())) {
 					System.out.println("Enter pet nickname: ");
 					String nickname = scanner.next();
-					client.addAnimal(new Cat(nickname));
+					client.addAnimal(new Animal(nickname));
 					animal = client.getAnimal(client.getNumOfAnimals() - 1);
 					System.out.println("The cat " + animal.getNickname() + ": was added.");
 					System.out.println("The client is " + client.getName()
@@ -104,18 +104,18 @@ public class Test {
 	 *@author demidenko
 	 *@version 1.0
 	 **/
-	protected static void getClients() {
+	protected static String getClients() {
 		System.out.println("Enter client name: ");
 		String name = scanner.next();
 		for(int i=0; i<clinica.numOfClients(); i++) {
 			client = clinica.getClient(i);
 			if(name.equals(client.getName())) {
-				System.out.println("Client " +client.getName() 
+				System.out.println("Client " +client.getName()
 						+  " was found. His id: " + client.getId()
 						+ ". His animal is " + animal.getNickname());
 			}else System.out.println("That name doesn't has in the list.");
 		}
+		return client.getName();
 	}
-	
 
 }
