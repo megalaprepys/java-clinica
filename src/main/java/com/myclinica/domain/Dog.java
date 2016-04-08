@@ -7,10 +7,6 @@ public class Dog extends Animal implements Pet{
 	}
 
 	public void eating() {
-		System.out.println("Dat eats meat...");
-		
+		System.out.println("Dog eats meat...");		
 	}
-
-
-
 }

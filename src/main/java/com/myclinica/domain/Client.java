@@ -15,6 +15,10 @@ public class Client {
 		this.setName(name);				
 	}
 	
+	/**
+	 * @method setId setting ID of client
+	 * @param id number of client
+	 */
 	protected void setId(int id) {
 		this.id = id;
 	}
@@ -36,10 +40,17 @@ public class Client {
 		animals.add(animal);		
 	}
 	
+	/**
+	 * @param id number of pet
+	 * @return getting pet by id
+	 */
 	protected Animal getAnimal(int id) {
 		return animals.get(id);
 	}
 	
+	/**
+	 * @return amount of pets
+	 */
 	protected int getNumOfAnimals() {
 		return animals.size();
 	}
